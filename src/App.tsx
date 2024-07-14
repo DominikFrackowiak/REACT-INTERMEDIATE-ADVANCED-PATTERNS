@@ -1,15 +1,29 @@
-
 import './App.css'
 
-function App() {
-  
+import SplitScreen from './components/split-screen'
 
-  return (
+function LeftSideComponent() {
+	return <h2>I am left</h2>
+}
+
+function RightSideComponent() {
+	return <h2>I am right</h2>
+}
+
+function App() {
+	return (
 		<>
 			<h1>REACT: INTERMEDIATE/ADVANCED PATTERNS</h1>
-      <ul>
-        
-      </ul>
+			<ul>
+				<li>
+					DESIGN PATTERNS: LAYOUT COMPONENTS:
+					<ul>
+						<li> - SCREEN SPLITTER - </li>
+					</ul>
+				</li>
+			</ul>
+
+			<SplitScreen Left={LeftSideComponent} Right={RightSideComponent} />
 		</>
 	)
 }
