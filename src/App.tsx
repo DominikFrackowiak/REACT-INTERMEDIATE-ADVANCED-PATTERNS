@@ -23,7 +23,10 @@ function App() {
 				</li>
 			</ul>
 
-			<SplitScreen Left={LeftSideComponent} Right={RightSideComponent} />
+			<SplitScreen leftWidth={1} rightWidth={3}>
+				<LeftSideComponent/>
+				<RightSideComponent/>
+			</SplitScreen>
 		</>
 	)
 }
