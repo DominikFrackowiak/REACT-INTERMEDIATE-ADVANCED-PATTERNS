@@ -1,27 +1,32 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-const Container = styled.div`
- display: flex;
-`
-
-const Panel = styled.div`
- flex: 1;
-`
-
-interface Props {
-	Left: React.ComponentType<any>
-	Right: React.ComponentType<any>
+interface PanelProps {
+	flex?: number
 }
 
-export default function SplitScreen({ Left, Right }: Props) {
+interface Props {
+	leftWidth: number
+	rightWidth: number
+	children: [React.ReactElement, React.ReactElement]
+}
+
+const Container = styled.div`
+	display: flex;
+`
+
+const Panel = styled.div<PanelProps>`
+	flex: ${props => props.flex};
+`
+
+export default function SplitScreen({
+	leftWidth = 1,
+	rightWidth = 1,
+	children,
+}: Props) {
 	return (
 		<Container>
-			<Panel>
-				<Left />
-			</Panel>
-			<Panel>
-				<Right />
-			</Panel>
+			<Panel flex={leftWidth}>{children[0]}</Panel>
+			<Panel flex={rightWidth}>{children[1]}</Panel>
 		</Container>
 	)
 }
