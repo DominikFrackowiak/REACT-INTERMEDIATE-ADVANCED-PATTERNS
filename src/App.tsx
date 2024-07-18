@@ -36,16 +36,8 @@ function App() {
 			</SplitScreen>
 
 			<h2>LIST</h2>
-			<List
-				items={authors}
-				sourceName='author'
-				ItemListComponent={SmallAuthorsListItems}
-			/>
-			<List
-				items={authors}
-				sourceName='author'
-				ItemListComponent={LargeAuthorsListItems}
-			/>
+			<List items={authors} ItemListComponent={SmallAuthorsListItems} />
+			<List items={authors} ItemListComponent={LargeAuthorsListItems} />
 		</>
 	)
 }
