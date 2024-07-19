@@ -24,6 +24,7 @@ function App() {
 					DESIGN PATTERNS: LAYOUT COMPONENTS:
 					<ul>
 						<li> - SCREEN SPLITTER - </li>
+						<li> - LISTS - </li>
 					</ul>
 				</li>
 			</ul>
@@ -35,7 +36,7 @@ function App() {
 				<RightSideComponent />
 			</SplitScreen>
 
-			<h2>LIST</h2>
+			<h2>LISTS</h2>
 			<List items={authors} ItemListComponent={SmallAuthorsListItems} />
 			<List items={authors} ItemListComponent={LargeAuthorsListItems} />
 		</>
